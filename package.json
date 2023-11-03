@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.4"
+
+  },
+  "scripts": {
+    "div":"json-server --watch assets/data/db.json "
+  }
+}

@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+display: flex;
+align-items: center;
+}
+li{
+list-style: none;
+}
+a {
+text-decoration: none;
+color: #000;
+}
+body{
+    background-color:blanchedalmond;
+}
+.single_product{
+    height: 100vh;
+}
+.single_product .image{
+height: 50%;
+}
+.single_product .image img{
+    height: 100%;
+    border-radius: .4rem;
+}
+.single_product h2{
+    font-weight: 700;
+    font-family: var(--headingFont);
+    color: var(--colorBlack);
+}
+.single_product .details .price{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-family: var(--headingFont);
+    color: var(--colorBlack);
+}
+.single_product .details .price del{
+    color:  #ff7c08;
+}
+.single_product .details h5{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--colorBlack);
+    margin-bottom: 10px;
+}
+.form-check{
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+.details .details_size label , .details_extra_item label{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.quentity_btn input{
+    width: 3rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(128, 128, 128,.4);
+    /* height: 2rem; */
+}
+.quentity_btn button{
+    border-radius: 50%;
+    text-align: center;
+    background-color: #ff7c08;
+    border: none;
+}
+.quentity_btn button:hover{
+    background-color: #000;
+    transition: .5s;
+}
+.quentity_btn_area h3
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.details .addcard{
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    border: none;
+    background-color: #ff7c08;
+    color: #fff;
+}
+.details .addcard a{
+    color: #fff;
+    font-size: 1.1rem;
+}
+.details .addcard:hover{
+    background-color: #000;
+    transition: .5s;
+}

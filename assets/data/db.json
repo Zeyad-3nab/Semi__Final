@@ -1,0 +1,85 @@
+{
+    "products":[
+        {
+            "id" :"1",
+            "typeOfProduct":"pizza",
+            "productImage":"./assets/styles/images/images/menu2_img_1.jpg",
+            "productName":"Hyderabadi Biryani",
+            "productOffer":65.00,
+            "productPrice":90.00,
+            "minusOfProduct":-24
+        },
+        {
+            "id" :"2",
+            "typeOfProduct":"chicken",
+            "productImage":"./assets/styles/images/images/menu2_img_2.jpg",
+            "productName":"Daria Sevtsova",
+            "productOffer":75.00,
+            "productPrice":75.00,
+            "minusOfProduct":-30
+        },
+        {
+            "id" :"3",
+            "typeOfProduct":"burger",
+            "productImage":"./assets/styles/images/images/menu2_img_3.jpg",
+            "productName":"Spicy Burger",
+            "productOffer":100.00,
+            "productPrice":110.00,
+            "minusOfProduct":-17
+        },
+        {
+            "id" :"4",
+            "typeOfProduct":"chicken",
+            "productImage":"./assets/styles/images/images/menu2_img_4.jpg",
+            "productName":"Fried Chicken",
+            "productOffer":99.00,
+            "productPrice":99.00,
+            "minusOfProduct":-22
+        },
+        {
+            "id" :"5",
+            "typeOfProduct":"desserts",
+            "productImage":"./assets/styles/images/images/menu2_img_5.jpg",
+            "productName":"Mozzarella Sticks",
+            "productOffer":75.00,
+            "productPrice":75.00,
+            "minusOfProduct":-72
+        },
+        {
+            "id" :"6",
+            "typeOfProduct":"desserts",
+            "productImage":"./assets/styles/images/images/menu2_img_6.jpg",
+            "productName":"Popcorn Chicken",
+            "productOffer":69.00,
+            "productPrice":80.00,
+            "minusOfProduct":-57
+        },
+        {
+            "id" :"7",
+            "typeOfProduct":"chicken",
+            "productImage":"./assets/styles/images/images/menu2_img_7.jpg",
+            "productName":"Chicken Wings",
+            "productOffer":79.00,
+            "productPrice":90.00,
+            "minusOfProduct":-43
+        },
+        {
+            "id" :"8",
+            "typeOfProduct":"burger",
+            "productImage":"./assets/styles/images/images/menu2_img_8.jpg",
+            "productName":"Onion Rings",
+            "productOffer":110.00,
+            "productPrice":110.00,
+            "minusOfProduct":-62
+        }
+    ],
+    "cart":[{
+        "productImage":"image",
+        "productName":"name",
+        "size":"size",
+        "drink":"drink",
+        "quantity":"quantity"
+    }]
+    
+
+}
