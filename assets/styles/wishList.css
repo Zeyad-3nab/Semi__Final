@@ -388,29 +388,9 @@ padding: 2.5px 5px;
     color: var(--colorBlack);
     line-height: 1.2;
 }
-
-.food_menu .container .btns button{
-    padding: 5px 25px;
-    text-transform: capitalize;
-    color: var(--colorPrimary);
-    margin: 5px 0px 0px 10px;
-    border-radius: 4px;
-    background: var(--colorWhite);
-    border: 1px solid var(--colorPrimary);
-    font-weight: 500;
-}
-/* .food_menu .container .btns button:nth-child(1){
-    color: var(--bs-white);
+.active i{
     background-color: var(--bs-orange);
-} */
-.active{
-    /* color: var(--white) !important; */
-    background-color:rgba(222, 184, 135,.3) !important;
-}
-.food_menu .container .btns button:hover{
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-    transition: .5s;
+    color: var(--white) !important;
 }
 .food_menu .foods .food_info{
     width: calc((100%/4)-3rem);
@@ -457,32 +437,15 @@ padding: 2.5px 5px;
 .food_menu .foods .food_info .icons i{
     color: var(--bs-orange);
 }
-.food_menu .foods .food_info .icons span{
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding-left: 10px;
-}
-.food_menu .foods .food_info .add_carts button{
-    padding: .3rem 1rem;
-    border: none;
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-    border-radius:.2rem;
-}
-.food_menu .foods .food_info .add_carts button:hover{
-    background-color: var(--bs-dark);
-    transition: .4s;
-}
 .food_menu .foods .food_info .add_carts .cart_icons i{
     border: 1.5px solid var(--bs-orange);
     border-radius:.2rem ;
-   color: var(--bs-orange);
+   /* color: var(--bs-orange); */
 }
-.food_menu .foods .food_info .add_carts .cart_icons i:hover{
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-    transition: .5s;
+.food_menu .foods .food_info .add_carts .cart_icons a{
+    cursor: pointer;
 }
+
 .last .container3 .who{
     display: flex;
     justify-content: center;
@@ -523,7 +486,6 @@ padding: 2.5px 5px;
     align-items: center;
     gap: .5rem;
     color: rgba(255,255,255,0.6);
-    /* display: block; */
     line-height: 36px;
     padding: 2px 0;
     transition: 300ms;

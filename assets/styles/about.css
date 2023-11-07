@@ -241,6 +241,8 @@ nav{
     background-color:rgba(255, 193, 7,.4);
     padding: .7rem .7rem;
     border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .menu_icon span{
 position: absolute;
@@ -252,6 +254,9 @@ bottom: 65%;
 left: 65%;
 font-size: .8rem;
 padding: 2.5px 3px;
+width: 1.5rem;
+height: 1.5rem;
+text-align: center;
 }
 .nav_icons .menu_icon li:hover a{
     color: var(--colorWhite);
@@ -410,6 +415,22 @@ padding: 2.5px 3px;
     position: relative;
     display: inline-block;
 }
+
+
+.container .about_company .about_company_text h4::after
+{
+    position: absolute;
+    content: "";
+    background: url(./images/images/heading_shapes_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 65px;
+    height: 23px;
+    top: 3px;
+    right: -80px;
+}
+
 .container .about_company .about_company_text h2{
     text-transform: capitalize;
     font-size: 2.2rem;
@@ -440,6 +461,19 @@ padding: 2.5px 3px;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+}
+.choose .choose_text h4::after
+{
+    position: absolute;
+    content: "";
+    background: url(./images/images/heading_shapes_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 65px;
+    height: 23px;
+    top: 3px;
+    right: -80px;
 }
 .choose .choose_text h2
 {

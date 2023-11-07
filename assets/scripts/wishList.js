@@ -1,6 +1,10 @@
 let wishList;
 const wishListCount = document.querySelector(".wishList_icon span");
 
+
+const cartValue=document.querySelector(".nav_icons .menu_icon .cart_icon span")
+  cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length
+  
 function getDataFromLocalStrorage() {
   if (localStorage.getItem("wishList")) {
     wishList = JSON.parse(localStorage.getItem("wishList"));
@@ -12,7 +16,7 @@ getDataFromLocalStrorage();
 function saveDataToLocalStorage(type, data) {
   localStorage.setItem(`${type}`, `${data}`);
 }
-
+var arr=[];
 function displayWishList(data) {
   let temp="";
   data.forEach(
@@ -36,18 +40,20 @@ function displayWishList(data) {
       <div class="heart active" onclick="removeWishList(this)">
           <a><i class="fa-regular fa-heart py-2 px-2 "></i></a>
           </div>
-        
       </div>
   </div>
   
   </div>`)
   );
   document.getElementById("_foodsId").innerHTML=temp;
-
   if (temp.length == 0) {
-    document.getElementById("showData").innerHTML = `<h1?>Cart is Empty</h1?`;
+    document.getElementById("_foodsId").innerHTML = `<h5>Empty</h5>`;
   }
 }
+
+
+
+
 function removeWishList(e) {
   let newData = JSON.parse(localStorage.getItem("wishList")) || [];
   if (e.classList.contains("active")) {
@@ -58,5 +64,8 @@ function removeWishList(e) {
     wishListCount.textContent = newData.length-1;
     newData.push(...data);
   }
-  console.log(wishList);
+  console.log(localStorage.getItem("wishList").length);
+  if(localStorage.getItem("wishList").length<=2){
+    document.getElementById("_foodsId").innerHTML = `<h5>Empty</h5>`;
+  }
 }

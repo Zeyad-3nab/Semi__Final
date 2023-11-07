@@ -24,6 +24,12 @@ function deactive(){
   btns.forEach((menu)=>menu.classList.remove("active"))
 }
 
+const cartValue=document.querySelector(".nav_icons .menu_icon .cart_icon span")
+  cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length 
+  const wish_List_value=document.querySelector(".nav_icons .menu_icon .wishList_icon span")
+wish_List_value.textContent=JSON.parse(localStorage.getItem("wishList")).length 
+
+
 
 const dropdownBtn=document.querySelector(".slider .container .fa-bars")
 const dropdownMenu=document.querySelector(".slider .container .drop_down")
@@ -39,10 +45,6 @@ dropdownBtn.addEventListener("click",()=>
 
 })
 
-
-// const wishListIcon = document.querySelector(".nav_icons .menu_icon .wishList_icon");
-const wishListCount = document.querySelector(".nav_icons .menu_icon .wishList_icon span");
-// console.log(wishListIcon);
 const baseUrl = `http://localhost:3000`;
 function saveDataToLocalStorage(type,data){
  localStorage.setItem(`${type}`,`${data}`); 
@@ -92,11 +94,24 @@ async function showSingleProduct(id){
   location.assign("singleProduct.html")
 }
 
-let wishListContainer = [];
+
+
 async function addProductToWishList(id) {
+  let wishListContainer = [];
+  let wishListNow=[];
+  if(localStorage.getItem("wishList")){
+    wishListNow=JSON.parse(localStorage.getItem("wishList"))
+    for(var i=0;i<wishListNow.length;i++){
+      wishListContainer.push(wishListNow  [i]);
+    }
+  }
+  else{
+    wishListContainer=[];
+  }
   let res = await fetch(`${baseUrl}/products`);
   let finalRes = await res.json();
   wishListContainer.push(finalRes[id]);
   saveDataToLocalStorage("wishList", JSON.stringify(wishListContainer));
-  wishListCount.textContent = JSON.parse(localStorage.getItem("wishList")).length;
+  wish_List_value.textContent=JSON.parse(localStorage.getItem("wishList")).length 
+
 }

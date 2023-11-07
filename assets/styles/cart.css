@@ -312,29 +312,30 @@ text-align: center;
     position: absolute;
     right: 10%;
 }
-.contact2{
+.contact1{
     position: relative;
     width: 100% !important;
     height: 40vh;
     background: rgba(35, 31, 64, 0.5);
     margin-top: 50px;   
 }
-.contact2 .container{
+.contact1 .container{
+    width: 100% !important;
     width: inherit !important;
     margin: 0 !important;
     padding: 0 !important;
     height: 100%;
 }
-.contact2 .container img{
+.contact1 .container img{
     width: inherit;
     position: absolute;
     z-index: -1;
     height: inherit;
 }
-.contact2 .text{
+.contact1 .text{
     color: var(--white);
 }
-.contact2 .text h1
+.contact1 .text h1
 {
     color: var(--colorWhite);
     text-transform: capitalize;
@@ -342,7 +343,7 @@ text-align: center;
     margin-bottom: 7px;
     font-family: var(--headingFont);
 }
-.contact2 .text a{
+.contact1 .text a{
     text-transform: capitalize;
     color: var(--colorWhite);
     font-size: 16px;
@@ -350,32 +351,32 @@ text-align: center;
     transition: all linear .3s;
     -webkit-transition: all linear .3s; 
 }
-.contact2 .text a:hover h4
+.contact1 .text a:hover h4
 {
     color: var(--colorPrimary);
     transition: .5s;
 
 }
-.contact2 .text a:nth-of-type(2)
+.contact1 .text a:nth-of-type(2)
 {
     color: var(--colorPrimary);
 }
-.contact2 .contact_text{
+.contact1 .contact_text{
     padding-left: 8rem;
 }
-.food_menu{
+.cart_menu{
     background-color:rgba(255, 228, 196,.5);
 }
-.food_menu .container{
+.cart_menu .container{
     width: 100%;
     margin: auto;
 }
-.food_menu del{
+.cart_menu del{
     color: gray;
     font-size: .9rem;
     padding: .5rem;
 }
-.food_menu .container h4 {
+.cart_menu .container h4 {
     color: var(--colorPrimary);
     font-family: var(--cursiveFont);
     font-weight: 600;
@@ -384,20 +385,7 @@ text-align: center;
     position: relative;
     display: inline-block;
 }
-.food_menu .container h4::after
-{
-    position: absolute;
-    content: "";
-    background: url(./images/images/heading_shapes_1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 65px;
-    height: 23px;
-    top: 3px;
-    right: -80px;
-}
-.food_menu .container h2 {
+.cart_menu .container h2 {
     text-transform: capitalize;
     font-size: 2.4rem;
     font-weight: 800;
@@ -405,103 +393,207 @@ text-align: center;
     color: var(--colorBlack);
     line-height: 1.2;
 }
+.tf__cart_list {
+    background: #f3f7fb;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    border-right: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
-.food_menu .container .btns button{
-    padding: 5px 25px;
-    text-transform: capitalize;
-    color: var(--colorPrimary);
-    margin: 5px 0px 0px 10px;
-    border-radius: 4px;
-    background: var(--colorWhite);
-    border: 1px solid var(--colorPrimary);
-    font-weight: 500;
-}
-/* .food_menu .container .btns button:nth-child(1){
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-} */
-.active{
-    color: var(--white) !important;
-    background-color: var(--bs-orange) !important;
-}
-.food_menu .container .btns button:hover{
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-    transition: .5s;
-}
-.food_menu .foods .food_info{
-    width: calc((100%/4)-3rem);
-    border-radius: .5rem;
-    overflow: hidden;
-    background-color: white;
-    padding-bottom: 1rem;
-} 
-.food_menu .foods .food_info:hover img{
-    transform: scale(1.2,1.2);
-    transition: .7s;
-}
-.food_menu .foods .food_info .image {
+.tf__cart_list table {
     width: 100%;
-    height: 200px;
-    overflow: hidden;
 }
-.food_menu .foods .food_info h4{
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--colorPrimary);
-    text-transform: capitalize;
-    margin-bottom: 30px;
-    margin-top: 13px;
+
+.tf__cart_list table tbody tr {
+    border-top: 1px solid #e3e3e3 !important;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
-.food_menu .foods .food_info h3:hover{
-    color: var(--bs-orange);
-    transition: .5s;
+.tf__cart_list table thead tr {
+    border-top: 1px solid #e3e3e3 !important;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
-.food_menu .foods .food_info h3{
+
+.tf__cart_list table tbody tr:first-child {
+    border-top: 0;
+    padding: 0;
+}
+
+.tf__cart_list .tf__pro_img {
+    width: 15%;
+    padding: 10px;
+    min-width: 130px;
+}
+
+.tf__cart_list .tf__pro_name {
+    width: 35%;
+    min-width: 240px;
+}
+
+.tf__cart_list td.tf__pro_name {
+    flex-direction: column;
+}
+
+.tf__pro_status p {
     text-transform: capitalize;
+    color: #08C !important;
+}
+
+.tf__pro_status span {
+    text-transform: capitalize;
+    color: #dc3545 !important;
+    display: inline-block;
+}
+
+.tf__cart_list .tf__pro_select {
+    width: 20%;
+    min-width: 180px;
+}
+
+.tf__cart_list .tf__pro_tk,
+.tf__cart_list .tf__pro_status {
+    width: 10%;
+    min-width: 120px;
+}
+
+.tf__cart_list .tf__pro_tk h6,
+.tf__cart_list .tf__pro_status h6 {
     color: var(--colorBlack);
-    font-size: 1.2rem;
-    font-family: var(--headingFont);
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 12px;
-    display: block;
+}
+
+.tf__cart_list .tf__pro_tk h6 del {
+    color: #888;
+    margin-right: 15px;
+}
+
+.tf__cart_list .tf__pro_icon {
+    width: 10%;
+    min-width: 100px;
+    border-right: none !important;
+}
+
+.tf__cart_list .tf__pro_icon a {
     text-align: center;
-    padding: .5rem 0;
+    font-size: 30px;
 }
-.food_menu .foods .food_info .icons i{
-    color: var(--bs-orange);
+
+.tf__pro_icon .common_btn {
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #fff !important;
+    padding: 7px 10px 5px 10px;
+    font-weight: 400;
 }
-.food_menu .foods .food_info .icons span{
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding-left: 10px;
+
+.tf__pro_icon .common_btn:hover {
+    color: #fff;
 }
-.food_menu .foods .food_info .add_carts .add_cart{
-    padding: .3rem 1rem;
+
+.tf__pro_icon a {
+    color: #0b2c3d;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    transition: all linear 0.3s;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.tf__cart_list table tr th,
+.tf__cart_list table tr td {
     border: none;
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-    border-radius:.2rem;
-    cursor: pointer;
+    color: var(--colorBlack);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 10px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #e3e3e3;
 }
-.food_menu .foods .food_info .add_carts .add_cart:hover{
-    background-color: var(--bs-dark);
-    transition: .4s;
+
+.tf__cart_list table tr th {
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
 }
-.food_menu .foods .food_info .add_carts .cart_icons i{
-    border: 1.5px solid var(--bs-orange);
-    border-radius:.2rem ;
-   color: var(--bs-orange);
-   cursor: pointer;
+
+.tf__cart_list table tr th .clear_all {
+    color: var(--colorBlack);
+    padding: 0;
+    font-size: 16px;
+    font-weight: 900;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
 }
-.food_menu .foods .food_info .add_carts .cart_icons i:hover{
-    color: var(--bs-white);
-    background-color: var(--bs-orange);
-    transition: .5s;
+
+.tf__cart_list table tr th .clear_all:hover {
+    color: var(--colorWhite);
 }
+
+.tf__cart_list table tbody tr td a,
+.tf__cart_list table tbody tr td p,
+.tf__cart_list table tbody tr td span {
+    font-family: "Roboto", sans-serif;
+    color: var(--paraColor);
+    text-transform: capitalize;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tf__cart_list table tbody tr td a {
+    color: var(--colorBlack);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    font-weight: 600;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__cart_list table tbody tr td a:hover {
+    color: var(--colorPrimary);
+}
+
+.tf__cart_list table tbody tr td p {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.tf__cart_list table tbody tr td span {
+    display: block;
+    width: 100%;
+    color: var(--colorPrimary);
+    font-size: 14px;
+}
+
+.tf__pro_name span {
+    text-transform: capitalize;
+    color: #0b2c3d;
+    font-size: 14px;
+}
+
 .last .container3 .who{
     display: flex;
     justify-content: center;
@@ -542,7 +634,6 @@ text-align: center;
     align-items: center;
     gap: .5rem;
     color: rgba(255,255,255,0.6);
-    /* display: block; */
     line-height: 36px;
     padding: 2px 0;
     transition: 300ms;

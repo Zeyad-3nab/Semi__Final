@@ -248,6 +248,8 @@ nav{
     background-color:rgba(255, 193, 7,.4);
     padding: .7rem .7rem;
     border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .menu_icon span{
 position: absolute;
@@ -259,6 +261,9 @@ bottom: 65%;
 left: 65%;
 font-size: .8rem;
 padding: 2.5px 3px;
+width: 1.5rem;
+height: 1.5rem;
+text-align: center;
 }
 .nav_icons .menu_icon li:hover a{
     color: var(--colorWhite);

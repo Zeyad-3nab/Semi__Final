@@ -335,10 +335,14 @@ nav{
     background-color:rgba(255, 193, 7,.4);
     padding: .7rem .7rem;
     border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .menu_icon span{
 position: absolute;
 z-index: 3;
+width: 1.5rem;
+height: 1.5rem;
 color: var(--bs-white);
 background-color: var(--bs-orange);
 border-radius: 50%;
@@ -346,6 +350,7 @@ bottom: 65%;
 left: 65%;
 font-size: .8rem;
 padding: 2.5px 3px;
+text-align: center;
 }
 .nav_icons .menu_icon li:hover a{
     color: var(--colorWhite);
@@ -408,7 +413,6 @@ padding: 2.5px 3px;
 }
 .section_footer{
     margin-top: 50px;
-    background-color: #fff;
     background: #231f40c4;
     background-position: center;
     background-repeat: no-repeat;
@@ -427,8 +431,27 @@ padding: 2.5px 3px;
 }
 .section_footer .container .footer_img img{
     border-radius: 50%;
-
+    position: relative;
 }
+/* .section_footer .container .footer_img::after{
+    position: absolute;
+    content: "";
+    background: url(./images/images/banner_img_shapes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 105%;
+    height: 105%;
+    top: 0;
+    left: 0;
+    animation: rotate linear 100s infinite;
+    animation: rotate linear 100s infinite;
+    z-index: 3;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -webkit-animation: rotate linear 100s infinite !important;
+    box-sizing: border-box;
+} */
 .section_footer .footer_text h1{
     font-size: 3rem;
     font-weight: 700;
@@ -494,6 +517,18 @@ margin-bottom: 10px;
 position: relative;
 display: inline-block;
 }
+.tf__offer_item .container .text h4::after{
+    position: absolute;
+    content: "";
+    background: url(./images/images/heading_shapes_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 65px;
+    height: 23px;
+    top: 3px;
+    right: -80px;
+ }
 .tf__offer_item .container .text .text_offer h2{
     text-transform: capitalize;
     font-size: 2rem;
@@ -615,6 +650,19 @@ display: inline-block;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+}
+.food_menu .container h4::after 
+{
+    position: absolute;
+    content: "";
+    background: url(./images/images/heading_shapes_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 65px;
+    height: 23px;
+    top: 3px;
+    right: -80px;
 }
 .food_menu .container h2 {
     text-transform: capitalize;
@@ -738,6 +786,19 @@ display: inline-block;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+}
+.chefs .container h4::after
+{
+    position: absolute;
+    content: "";
+    background: url(./images/images/heading_shapes_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 65px;
+    height: 23px;
+    top: 3px;
+    right: -80px;
 }
 .chefs .chefs_icons a{
     color: var(--bs-white);

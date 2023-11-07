@@ -53,6 +53,15 @@ const swiperBanner1 = new Swiper(".tf__offer_item .swiperBanner", {
     },
   });
 
+
+
+  const cartValue=document.querySelector(".nav_icons .menu_icon .cart_icon span")
+  cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length
+  const wish_List_value=document.querySelector(".nav_icons .menu_icon .wishList_icon span")
+  wish_List_value.textContent=JSON.parse(localStorage.getItem("wishList")).length
+
+
+
 const btns=document.querySelectorAll(".food_menu .container .btns button")
 async function filterType(typeOfProduct){ 
   let res=await fetch(`${baseUrl}/products?typeOfProduct=${typeOfProduct}`)
