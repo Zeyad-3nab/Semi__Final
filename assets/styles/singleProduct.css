@@ -17,6 +17,23 @@ color: #000;
 body{
     background-color:blanchedalmond;
 }
+.wrong{
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: .2rem;
+    background-color: white;
+}
+.wrong:hover{
+    color: white;
+    background-color: red;
+    transition: .5s;
+}
 .single_product{
     height: 100vh;
 }

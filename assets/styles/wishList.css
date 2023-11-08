@@ -215,6 +215,11 @@ a {
     transition: .6s;
 }
 .icons a{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--bs-orange);
     padding: .5rem .5rem;
     border-radius: 50%;
@@ -233,20 +238,30 @@ nav{
     background-color:rgba(255, 193, 7,.4);
     padding: .7rem .7rem;
     border-radius: 50%;
-}
-.menu_icon li:nth-of-type(1) a{
-    padding: .2rem .2rem !important;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .menu_icon span{
 position: absolute;
 z-index: 3;
+width: 1.5rem;
+height: 1.5rem;
 color: var(--bs-white);
 background-color: var(--bs-orange);
 border-radius: 50%;
 bottom: 65%;
 left: 65%;
 font-size: .8rem;
-padding: 2.5px 5px;
+padding: 2.5px 3px;
+text-align: center;
+}
+.wishList_icon{
+    background-color: var(--bs-orange) !important;
+    color: var(--white);
+}
+.menu_icon li:nth-of-type(2) span{
+    color: var(--white) !important;
+    background-color: var(--black) !important;
 }
 .nav_icons .menu_icon li:hover a{
     color: var(--colorWhite);
@@ -269,9 +284,7 @@ padding: 2.5px 5px;
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }
-.nav_content .nav_items .Menu{
-    color: var(--bs-orange);
-}
+
 .nav_content .nav_items .nav_link::after{
     position: absolute;
     content: "";
@@ -302,6 +315,11 @@ padding: 2.5px 5px;
 }
 .nav_items_drop_down li:hover a{
     color: orange;
+}
+
+.slider .container .fa-bars{
+    position: absolute;
+    right: 10%;
 }
 .slider .container .fa-bars{
     position: absolute;
@@ -452,7 +470,6 @@ padding: 2.5px 5px;
     gap: 2.5rem;
     background-color:var(--black);
     color: rgba(255, 255, 255,.6);
-    font-size: 14px;
     font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 3rem 0;
 }
@@ -460,7 +477,7 @@ padding: 2.5px 5px;
     width: 100% !important;
 }
 .last .container3 .who img{
-    width: 250px;
+    width: 200px;
 }
 .last .container3 .who .who_we p{
     margin: 0 0 10px;
@@ -492,6 +509,12 @@ padding: 2.5px 5px;
     text-decoration: none;
 
 }
+.last .container3  h2{
+    font-size: 1.5rem;
+}
+.last .container3  h4{
+    font-size: 1rem;
+}
 .last .container3 .more a:hover{
     color: rgba(255,255,255,1);
 
@@ -519,12 +542,12 @@ padding: 2.5px 5px;
 .last .container3 .who .certificates .images img:hover{
     opacity: 1;
 }
-.last .container3 .who .contacts .contact1{
+.last .container3 .who .contacts .contact4{
     display: flex;
     gap: .5rem;
     padding-bottom: 1rem;
 }
-.last .container3 .who .contacts .contact1:nth-of-type(2){
+.last .container3 .who .contacts .contact4:nth-of-type(2){
     color: rgba(255, 255, 255,1);
 }
 .last .container3 .who .contacts  .icons i{
@@ -544,3 +567,4 @@ border-radius: .4rem;
 .last .container3 .finally h4{
     padding: 1.5rem 0;
 }
+

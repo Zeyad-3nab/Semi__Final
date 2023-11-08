@@ -1,66 +1,93 @@
+let userName = JSON.parse(localStorage.getItem("userData"));
+const user = document.querySelector(".user-icon");
+const userData = document.querySelector(".user p");
+if (localStorage.getItem("userData")) {
+  userData.textContent = userName.name;
+}
+user.addEventListener("click", () => {
+  setTimeout(() => {
+    window.location.assign("index.html");
+  }, 1000);
+});
+
+const spinner = document.querySelector(".spinner");
+const loadingPage = document.querySelector(".loading-page");
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    spinner.style.opacity = "0";
+    spinner.style.display = "none";
+  }, 2000);
+  setTimeout(() => {
+    loadingPage.style.opacity = "0";
+    loadingPage.remove();
+  }, 2500);
+});
 const swiperBanner1 = new Swiper(".tf__offer_item .swiperBanner", {
-    speed: 400,
-    spaceBetween: 0,
-    slidesPerView: 1,
-    autoHeight: true,
-    loop: true,
-    autoplay: {
-      delay: 3000,
+  speed: 400,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  autoHeight: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: ".right",
+    prevEl: ".left",
+  },
+  Pagination: {
+    clickable: true,
+    enabled: true,
+    bulletElement: "span",
+    el: ".swiper-pagination-bullet",
+    bulletActiveClass: ".swiper-pagination-bullet",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
     },
-    navigation: {
-      nextEl: ".right",
-      prevEl: ".left",
+  },
+});
+const swiperBanner2 = new Swiper(".chefs_menu .swiperBanner", {
+  speed: 400,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 3000,
+  },
+  autoHeight: true,
+  loop: true,
+  navigation: {
+    nextEl: ".right2",
+    prevEl: ".left2",
+  },
+  Pagination: {
+    clickable: true,
+    enabled: true,
+    bulletElement: "span",
+    el: ".swiper-pagination-bullet",
+    bulletActiveClass: ".swiper-pagination-bullet",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
     },
-    Pagination: {
-      clickable: true,
-      enabled: true,
-      bulletElement: "span",
-      el: ".swiper-pagination-bullet",
-      bulletActiveClass: ".swiper-pagination-bullet",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-    },
-  });
-  const swiperBanner2 = new Swiper(".chefs_menu .swiperBanner", {
-    speed: 400,
-    spaceBetween: 0,
-    slidesPerView: 1,
-    autoplay: {
-      delay: 3000,
-    },
-    autoHeight: true,
-    loop: true,
-    navigation: {
-      nextEl: ".right2",
-      prevEl: ".left2",
-    },
-    Pagination: {
-      clickable: true,
-      enabled: true,
-      bulletElement: "span",
-      el: ".swiper-pagination-bullet",
-      bulletActiveClass: ".swiper-pagination-bullet",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-    },
-  });
+  },
+});
 
-
-
-  const cartValue=document.querySelector(".nav_icons .menu_icon .cart_icon span")
-  cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length
-  const wish_List_value=document.querySelector(".nav_icons .menu_icon .wishList_icon span")
-  wish_List_value.textContent=JSON.parse(localStorage.getItem("wishList")).length
-
-
+const cartValue = document.querySelector(
+  ".nav_icons .menu_icon .cart_icon span"
+);
+cartValue.textContent = JSON.parse(localStorage.getItem("cartItem")).length;
+const wish_List_value = document.querySelector(
+  ".nav_icons .menu_icon .wishList_icon span"
+);
+wish_List_value.textContent = JSON.parse(
+  localStorage.getItem("wishList")
+).length;
 
 const btns=document.querySelectorAll(".food_menu .container .btns button")
 async function filterType(typeOfProduct){ 

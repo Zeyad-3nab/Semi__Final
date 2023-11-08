@@ -1,3 +1,16 @@
+const dropdownBtn=document.querySelector(".slider .container .fa-bars")
+const dropdownMenu=document.querySelector(".slider .container .drop_down")
+dropdownBtn.addEventListener("click",()=>
+{
+ if(dropdownMenu.style.display=="flex"){
+  dropdownMenu.style.display="none"
+ }
+  else
+ {
+  dropdownMenu.style.display="flex"
+ }
+
+})
 
 const cartValue=document.querySelector(".nav_icons .menu_icon .cart_icon span")
   cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length 
@@ -172,6 +185,7 @@ function removeCart(e)
         const  text= `<h5 class="text-center">EmptyCart</h5>`
       
         document.getElementById("_tbody").innerHTML=text
+        document.querySelector(".html_empty").style.display="none";
     }
   }
 
@@ -186,6 +200,7 @@ function removeCart(e)
     saveDataToLocalStorage("cartItem", JSON.stringify([]));
     allTr.forEach(e => {
         e.remove();
+        document.querySelector(".html_empty").style.display="none";
         
     });
     if(localStorage.getItem("cartItem").length<=2){

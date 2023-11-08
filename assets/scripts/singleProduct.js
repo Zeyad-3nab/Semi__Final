@@ -8,7 +8,9 @@ getDataFromLocalStorage();
 
 function displaySingleProduct(data){
     let temp="";
-    temp+=`<div class="single_product d-flex justify-content-center align-items-center gap-5 flex-wrap">
+    temp+=`   
+    <a class="wrong" href="menu.html"><i class="fa-solid fa-xmark"></i></a> 
+    <div class="single_product d-flex justify-content-center align-items-center gap-5 flex-wrap">
     <div class="image">
        <img src="${data.productImage}" alt="">
     </div>

@@ -223,6 +223,11 @@ a {
     transition: .6s;
 }
 .icons a{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--bs-orange);
     padding: .5rem .5rem;
     border-radius: 50%;
@@ -539,7 +544,6 @@ text-align: center;
     gap: 2.5rem;
     background-color:var(--black);
     color: rgba(255, 255, 255,.6);
-    font-size: 14px;
     font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 3rem 0;
 }
@@ -547,7 +551,7 @@ text-align: center;
     width: 100% !important;
 }
 .last .container3 .who img{
-    width: 250px;
+    width: 200px;
 }
 .last .container3 .who .who_we p{
     margin: 0 0 10px;
@@ -573,12 +577,17 @@ text-align: center;
     align-items: center;
     gap: .5rem;
     color: rgba(255,255,255,0.6);
-    /* display: block; */
     line-height: 36px;
     padding: 2px 0;
     transition: 300ms;
     text-decoration: none;
 
+}
+.last .container3  h2{
+    font-size: 1.5rem;
+}
+.last .container3  h4{
+    font-size: 1rem;
 }
 .last .container3 .more a:hover{
     color: rgba(255,255,255,1);
@@ -607,12 +616,12 @@ text-align: center;
 .last .container3 .who .certificates .images img:hover{
     opacity: 1;
 }
-.last .container3 .who .contacts .contact1{
+.last .container3 .who .contacts .contact4{
     display: flex;
     gap: .5rem;
     padding-bottom: 1rem;
 }
-.last .container3 .who .contacts .contact1:nth-of-type(2){
+.last .container3 .who .contacts .contact4:nth-of-type(2){
     color: rgba(255, 255, 255,1);
 }
 .last .container3 .who .contacts  .icons i{
@@ -632,3 +641,4 @@ border-radius: .4rem;
 .last .container3 .finally h4{
     padding: 1.5rem 0;
 }
+
