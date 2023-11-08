@@ -208,6 +208,7 @@ function removeCart(e)
       
         document.getElementById("_tbody").innerHTML=text
     }
+    cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length 
 }
   
   function saveDataToLocalStorage(type, data) {

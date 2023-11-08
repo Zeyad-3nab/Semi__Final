@@ -1,4 +1,5 @@
-:root{
+
+ :root{
     --colorPrimary: #ff7c08; 
     
     --colorRed: #eb0029; 
@@ -144,7 +145,6 @@
     ul {
     display: flex;
     align-items: center;
-    /* gap: 1rem; */
 }
 li{
     list-style: none;
@@ -179,7 +179,7 @@ display: block !important;
 .section_footer img{
     width: 100% !important;
     height: 100% !important;
-
+    /* height: 200vh !important; */
 }
 .section_footer .container .footer_img img{
     width: 50% !important;
@@ -294,9 +294,7 @@ display: block !important;
         width: 80% !important;
     }
     }
-
-
-
+    
 
 .tf__topbar{
     width: 100%;
@@ -319,11 +317,6 @@ display: block !important;
     transition: .6s;
 }
 .icons a{
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--bs-orange);
     padding: .5rem .5rem;
     border-radius: 50%;
@@ -439,27 +432,8 @@ text-align: center;
 .section_footer .container .footer_img img{
     border-radius: 50%;
     position: relative;
-    object-fit: unset;
 }
-/* .section_footer .container .footer_img::after{
-    position: absolute;
-    content: "";
-    background: url(./images/images/banner_img_shapes.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 105%;
-    height: 105%;
-    top: 0;
-    left: 0;
-    animation: rotate linear 100s infinite;
-    animation: rotate linear 100s infinite;
-    z-index: 3;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -webkit-animation: rotate linear 100s infinite !important;
-    box-sizing: border-box;
-} */
+
 .section_footer .footer_text h1{
     font-size: 3rem;
     font-weight: 700;
@@ -546,22 +520,12 @@ display: inline-block;
     gap: .75rem;
  }
  .tf__offer_item .container .text .text_offer .text_offer_btns a:nth-child(1){
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--bs-orange);
     color: var(--bs-white);
     padding: .5rem;
     border-radius: 50%;
  }
  .tf__offer_item .container .text .text_offer .text_offer_btns a:nth-child(2){
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--bs-black);
     color: var(--bs-white);
     padding: .5rem;
@@ -724,8 +688,6 @@ display: inline-block;
 .food_menu .foods .food_info:hover img{
     transform: scale(1.2,1.2);
     transition: .7s;
-    object-fit: unset;
-
 }
 .food_menu .foods .food_info .image {
     width: 100%;
@@ -820,15 +782,7 @@ display: inline-block;
     top: 3px;
     right: -80px;
 }
-.chefs .chefs_icons {
-    gap: .75rem;
-}
 .chefs .chefs_icons a{
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: var(--bs-white);
     background-color: var(--bs-black);
     padding: .5rem .5rem;
@@ -850,7 +804,6 @@ display: inline-block;
 .chefs_menu .chef_info:hover img{
     transform: scale(1.1,1.1);
     transition: .5s;
-    object-fit: unset;
 }
 .chefs_menu .chef_info .image {
     width: 50%; 
@@ -862,7 +815,6 @@ display: inline-block;
 .chefs_menu .chef_info .image img{
     width: 100%;
     border-radius: 50%;
-    object-fit: unset;
     
 }
 .chefs_menu .chef_info p{
@@ -971,7 +923,7 @@ transition: .5s;
 }
 .order .container1 .to_order{
     height: inherit;
-    background: rgba(35, 31, 64, 0.6);
+    background: rgba(35, 31, 64, 0.7);
 }
 .order .container1 .image {
     position:absolute;
@@ -982,7 +934,6 @@ transition: .5s;
 .order .container1 .image img{
     height: inherit;
     width: 100%;
-    object-fit: unset;
 }
 .to_order .to_order_text h2{
     font-size: 2.5rem;
@@ -1019,7 +970,6 @@ transition: .5s;
     padding: 0 .5rem;
     height: 100%;
     border-radius: 1rem;
-    object-fit: unset;
 }
 .to_order .to_order_text li:hover a{
     background-color: var(--colorRed);
@@ -1027,7 +977,6 @@ transition: .5s;
 }
 .order .swiper-slide img{
     border-radius: 1rem;
-    object-fit: unset;
 }
 .to_order .to_order_text li:hover a{
     background-color: var(--colorRed);
@@ -1039,6 +988,7 @@ transition: .5s;
     gap: 2.5rem;
     background-color:var(--black);
     color: rgba(255, 255, 255,.6);
+    font-size: 14px;
     font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 3rem 0;
 }
@@ -1046,8 +996,7 @@ transition: .5s;
     width: 100% !important;
 }
 .last .container3 .who img{
-    width: 200px;
-    object-fit: unset;
+    width: 250px;
 }
 .last .container3 .who .who_we p{
     margin: 0 0 10px;
@@ -1059,7 +1008,6 @@ transition: .5s;
 }
 .last .container3 .who .who_we img{
     border-radius: .4rem;
-    object-fit: unset;
 }
 .last .container3 .who .who_we .text{
     color: var(--white);
@@ -1074,17 +1022,12 @@ transition: .5s;
     align-items: center;
     gap: .5rem;
     color: rgba(255,255,255,0.6);
+    /* display: block; */
     line-height: 36px;
     padding: 2px 0;
     transition: 300ms;
     text-decoration: none;
 
-}
-.last .container3  h2{
-    font-size: 1.5rem;
-}
-.last .container3  h4{
-    font-size: 1rem;
 }
 .last .container3 .more a:hover{
     color: rgba(255,255,255,1);
@@ -1094,7 +1037,6 @@ transition: .5s;
     width: 35px;
     opacity: .4;
     transition: .3s;
-    object-fit: unset;
 }
 .last .container3 .more .img{
     padding-top:1.5rem ;
@@ -1110,7 +1052,6 @@ transition: .5s;
     width: 110px;
     opacity: .4;
     transition: .3s;
-    object-fit: unset;
 }
 .last .container3 .who .certificates .images img:hover{
     opacity: 1;
@@ -1141,3 +1082,56 @@ border-radius: .4rem;
     padding: 1.5rem 0;
 }
 
+
+.loading-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #cccccc;
+    transition: 1s .5s;
+    z-index: 10000;
+}
+.loading-page img {
+
+    /* animation: loader 2s infinite linear; */
+    margin-bottom: 2rem;
+}
+.progress {
+    width: 30%;
+    position: relative;
+    height: .2rem;
+    border-radius: 6rem;
+    background: #ececee;
+}
+.progress::after {
+    animation: progress 2.5s  linear;
+    content: "";
+    width: 0;
+    height: .2rem;
+    border-radius: 6rem;
+    background: #ff7c08;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+@keyframes loader {
+0% {
+    opacity: 0;
+}
+100% {
+      opacity: 1;
+  }
+}
+@keyframes progress {
+0% {
+    width: 0;
+}
+100% {
+      width: 100%;
+  }
+}

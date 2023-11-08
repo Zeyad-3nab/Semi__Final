@@ -377,6 +377,7 @@ text-align: center;
 }
 .blog_sec .blog_slide{
     width: calc((100% - 3rem)/3);
+    min-height: 77vh;
     border-radius: .4rem;
     padding: .7rem;
     box-shadow: var(--boxShadow);

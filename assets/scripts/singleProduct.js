@@ -57,7 +57,7 @@ function displaySingleProduct(data){
             </div>
         </div>
         <h5>select quentity</h5>
-        <div class="quentity_btn_area d-flex flex-wrapa align-items-center gap-5">
+        <div class="quentity_btn_area d-flex flex-wrap align-items-center gap-5">
             <div class="quentity_btn">
                 <button class="btn btn-danger" onclick="minus()"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
                 <input class="text-center inputNumber " value=1 type="text" placeholder="1">
@@ -65,7 +65,10 @@ function displaySingleProduct(data){
             </div>
             <h3>$${data.productOffer}</h3>
         </div>
+        <div class="d-block text-center">
         <button class="addcard" onclick="getData()" ><a href="#">Add To Card</a></button>
+        <h5 class="done">Done</h5>
+        </div>
     </div>
 
 </div>`
@@ -95,6 +98,8 @@ else{
 
 }
 
+const done=document.querySelector(".done")
+console.log(done);
 function getData(){
     var item={
         productImage:null,
@@ -130,11 +135,15 @@ function getData(){
             item.option2Price=element.value
             }
         }
-       
     });
     item.productQuantity=document.querySelector(".quentity_btn .inputNumber").value
     cart.push(item);
     saveDataToLocalStorage("cartItem", JSON.stringify(cart));
+    done.style.display="block";
+    setTimeout(() => {
+        done.style.display="none";
+      }, 2000);
+
 }
 
 function saveDataToLocalStorage(type,data){

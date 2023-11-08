@@ -72,14 +72,5 @@
             "productPrice":110.00,
             "minusOfProduct":-62
         }
-    ],
-    "cart":[{
-        "productImage":"image",
-        "productName":"name",
-        "size":"size",
-        "drink":"drink",
-        "quantity":"quantity"
-    }]
-    
-
+    ]
 }

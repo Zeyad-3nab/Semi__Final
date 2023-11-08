@@ -120,3 +120,6 @@ height: 50%;
     background-color: #000;
     transition: .5s;
 }
+.done{
+    display: none;
+}
