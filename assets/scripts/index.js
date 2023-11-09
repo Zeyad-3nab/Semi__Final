@@ -1,17 +1,17 @@
 
-const spinner = document.querySelector(".spinner");
-const loadingPage = document.querySelector(".loading-page");
+// const spinner = document.querySelector(".spinner");
+// const loadingPage = document.querySelector(".loading-page");
 
-window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    spinner.style.opacity = "0";
-    spinner.style.display = "none";
-  }, 2000);
-  setTimeout(() => {
-    loadingPage.style.opacity = "0";
-    loadingPage.remove();
-  }, 2500);
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   setTimeout(() => {
+//     spinner.style.opacity = "0";
+//     spinner.style.display = "none";
+//   }, 2000);
+//   setTimeout(() => {
+//     loadingPage.style.opacity = "0";
+//     loadingPage.remove();
+//   }, 2500);
+// });
 
 
 const swiperBanner1 = new Swiper(".tf__offer_item .swiperBanner", {
