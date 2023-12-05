@@ -291,7 +291,7 @@ text-align: center;
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }
-.nav_content .nav_items .Contact{
+.nav_content .nav_items .Contact ,  .nav_items_drop_down .Contact{
     color: var(--bs-orange);
 }
 .nav_content .nav_items .nav_link::after{

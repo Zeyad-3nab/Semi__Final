@@ -179,7 +179,6 @@ display: block !important;
 .section_footer img{
     width: 100% !important;
     height: 100% !important;
-    /* height: 200vh !important; */
 }
 .section_footer .container .footer_img img{
     width: 50% !important;
@@ -193,7 +192,8 @@ display: block !important;
 }
 .section_footer .container {
     gap: 8rem !important;
-}od_menu .foods .food_info{
+}
+.food_menu .foods .food_info{
     width: 200px !important;
 }
 .food_menu .foods .food_info .add_carts{
@@ -371,14 +371,14 @@ text-align: center;
     color: var(--colorPrimary);
     text-transform: capitalize;
 }
-.nav_content .nav_items li:hover a{
+.nav_content .nav_items li:hover a {
     color: var(--bs-orange);
     transition: .4s;
 }
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }
-.nav_content .nav_items .Home{
+.nav_content .nav_items .Home , .nav_items_drop_down .Home{
     color: var(--bs-orange);
 }
 .nav_content .nav_items .nav_link::after{
@@ -693,8 +693,11 @@ display: inline-block;
     background-color: var(--bs-orange);
     transition: .5s;
 }
+.food_menu .foods {
+    gap: 2rem;
+}
 .food_menu .foods .food_info{
-    width: calc((100%/4)-3rem);
+    width: calc((100% - 6rem)/4);
     border-radius: .5rem;
     overflow: hidden;
     background-color: white;

@@ -164,6 +164,13 @@ function getDataFromLocalStorage(){
     if(localStorage.getItem("cartItem")){
         let singleProduct=JSON.parse(localStorage.getItem("cartItem"))
         displayWishList(singleProduct);
+        if(localStorage.getItem("cartItem").length>2){
+            document.querySelector(".html_empty").style.display="none";
+        }
+        else{
+            document.querySelector(".html_empty").style.display="block";
+        }
+       
     }
 }
 getDataFromLocalStorage();
@@ -200,13 +207,12 @@ function removeCart(e)
     saveDataToLocalStorage("cartItem", JSON.stringify([]));
     allTr.forEach(e => {
         e.remove();
-        document.querySelector(".html_empty").style.display="none";
         
     });
     if(localStorage.getItem("cartItem").length<=2){
         const  text= `<h5 class="text-center">EmptyCart</h5>`
-      
         document.getElementById("_tbody").innerHTML=text
+        document.querySelector(".html_empty").style.display="none";
     }
     cartValue.textContent=JSON.parse(localStorage.getItem("cartItem")).length 
 }

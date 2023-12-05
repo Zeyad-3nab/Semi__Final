@@ -286,7 +286,7 @@ text-align: center;
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }
-.nav_content .nav_items .Blog{
+.nav_content .nav_items .Blog , .nav_items_drop_down .Blog{
     color: var(--bs-orange);
 }
 .nav_content .nav_items .nav_link::after{

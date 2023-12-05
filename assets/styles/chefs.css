@@ -285,7 +285,7 @@ text-align: center;
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }
-.nav_content .nav_items .Chefs{
+.nav_content .nav_items .Chefs ,  .nav_items_drop_down .Chefs{
     color: var(--bs-orange);
 }
 .nav_content .nav_items .nav_link::after{

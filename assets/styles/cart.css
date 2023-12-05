@@ -162,6 +162,9 @@ a {
     .tf__topbar .icons{
         display: none !important;
     }
+    .cart_menu .container{
+        height: min-content;
+    }
 }
 @media screen and (min-width:0px) and (max-width:767px){
     html{
@@ -284,6 +287,9 @@ text-align: center;
     color: var(--white) !important;
     background-color: var(--black) !important;
 }
+.nav_items_drop_down .Cart{
+    color: var(--colorPrimary);
+ }
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }

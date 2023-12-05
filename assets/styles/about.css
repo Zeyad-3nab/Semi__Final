@@ -284,7 +284,7 @@ text-align: center;
 .nav_content .nav_items .nav_link:hover.nav_link::after{
     display: block !important;
 }
-.nav_content .nav_items .About{
+.nav_content .nav_items .About ,.nav_items_drop_down .About{
     color: var(--bs-orange);
 }
 .nav_content .nav_items .nav_link::after{
